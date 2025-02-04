@@ -1,0 +1,50 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"  // SQLite file in the project folder (e.g., dev.db)
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+
+// models
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  password  String
+  role      String   
+  isDeleted Boolean  @default(false)
+  rememberMe Boolean @default(false)
+  refreshToken String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+}
+
+model user_helath_details {
+  emp_id      String   @id
+  name        String?  
+  spo2        Int? @default(0)
+  bpm         Int? @default(0)
+  weight      Int? @default(0)
+  height      Int? @default(0)
+  bmi         Float? @default(0.00)
+  chest       Int? @default(0)
+  waist       Int? @default(0)
+  isDeleted Boolean  @default(false)
+  body_details String?   // Use Json type for storing JSON data
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model sensor_information {
+    id        Int      @id @default(autoincrement())
+    soil_sensor Int
+    noise_sensor Int
+    createdAt   DateTime @default(now())
+}
+
+
+

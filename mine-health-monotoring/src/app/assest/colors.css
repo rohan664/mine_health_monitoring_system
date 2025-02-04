@@ -1,0 +1,29 @@
+:root {
+    --background: #eff3f8;
+    --primary: #f5f1e3;
+    --foreground: #0d1b2a;
+    --primary-dark: #17244c;
+    --primary-light: #ffffff;
+    --secondary: #ff6f61;
+    --secondary-dark: #e63946;
+    --secondary-light: #ff9b8e;
+    --accent: #4caf50;
+    --accent-dark: #087f23;
+    --accent-light: #80e27e;
+}
+
+@media (prefers-color-scheme:light) {
+    :root {
+        --background: #17244c;
+        --primary: #203175;
+        --foreground: #ffffff;
+        --primary-dark: #f5f1e3;
+        --primary-light: #000000;
+        --secondary: #ff9b8e;
+        --secondary-dark: #ff6f61;
+        --secondary-light: #c43e00;
+        --accent: #80e27e;
+        --accent-dark: #4caf50;
+        --accent-light: #087f23;
+    }
+}
