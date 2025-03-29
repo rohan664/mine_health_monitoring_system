@@ -12,7 +12,7 @@
     --accent-light: #80e27e;
 }
 
-@media (prefers-color-scheme:light) {
+@media (prefers-color-scheme:dark) {
     :root {
         --background: #17244c;
         --primary: #203175;
